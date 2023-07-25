@@ -8,7 +8,7 @@ export default class LineVisualizer extends Visualizer2d {
         gradient.addColorStop(1, "green");
 
         this.canvas.strokeStyle = gradient;
-        this.canvas.linewidth = 50;
+        this.canvas.lineWidth = 8;
     }
 
     draw() {
@@ -25,13 +25,13 @@ export default class LineVisualizer extends Visualizer2d {
 
         // Draw the lines
         canvas.beginPath();
-        canvas.moveTo(-5, this.height / 2); // start a little off screen
         for (let i = 0; i < this.audioAnalyser.slices; i++) {
             // Calculate the line position
             const x = i * spacing;
             const y = (this.height / 2) * (audioData[i] / 128);
 
             // Draw the line
+            if (i === 0) canvas.moveTo(x, y)
             canvas.lineTo(x, y);
             canvas.stroke();
         }

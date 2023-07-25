@@ -1,4 +1,4 @@
-import Visualizer from "./visualizer.js";
+import Visualizer from "./Visualizer.js";
 
 export default class Visualizer3d extends Visualizer{
     initCanvas() {
