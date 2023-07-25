@@ -86,7 +86,7 @@ export default class BarVisualizer extends Visualizer2d {
 
         // Set the bar width and spacing
         const barWidth = this.width / this.audioAnalyser.slices;
-        const barSpacing = 5;
+        const barSpacing = 6;
 
         // Draw the audio visualization bars
         const currentTime = Date.now() - animation.startTime;
